@@ -148,7 +148,13 @@ class AppPixivAPI(BasePixivAPI):
     def user_illusts(self, user_id, type='illust'):
 
     # 用户收藏作品列表 
-    def user_bookmarks_illust(self, user_id, restrict='public'):
+    
+    # Gets a set of images that has been bookmarked by a user with id <user_id>
+    # params:
+    # - user_id: a pixiv user_id we will use to get bookmarks from
+    # - restrict: public | private
+    # - tag: A single user bookmark/tag we will use to filter down the images
+    def user_bookmarks_illust(self, user_id, restrict='public', tag=None):
 
     # 关注用户的新作
     # restrict: [public, private]
